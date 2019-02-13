@@ -52,19 +52,30 @@ var getTiket = function(res,url){
         var data = JSON.parse(body);
 
         cache.jsapi_ticket = data.ticket;
-        res.render('index', { 
-          title: '微信分享JSSDK',
-          appid: APPID,
-          sign: JSON.stringify(sign(cache.jsapi_ticket,url))
-        });
+
+
+        res.send({
+            appid: APPID,
+            sign: JSON.stringify(sign(cache.jsapi_ticket,url))
+        })
+        // res.render('index', {
+        //   title: '微信分享JSSDK',
+        //   appid: APPID,
+        //   sign: JSON.stringify(sign(cache.jsapi_ticket,url))
+        // });
       }
     });
   }else{
-      res.render('index', { 
-        title: '微信分享JSSDK',
-        appid: APPID,
-        sign: JSON.stringify(sign(cache.jsapi_ticket,url))
-      });
+
+      res.send({
+          appid: APPID,
+          sign: JSON.stringify(sign(cache.jsapi_ticket,url))
+      })
+      // res.render('index', {
+      //   title: '微信分享JSSDK',
+      //   appid: APPID,
+      //   sign: JSON.stringify(sign(cache.jsapi_ticket,url))
+      // });
   }
 };
 

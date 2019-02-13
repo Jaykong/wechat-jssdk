@@ -1,9 +1,20 @@
 #!/usr/bin/env node
 
 global.params = {
-  appid: 'wxb7289add5eeccd94',
-  secret: 'a9f49f6ead1f9a5468215aeecb8daf86'
+  appid: 'wxdf37904ad15f5f95',
+  secret: 'a2818a5b02f7a7c93f95fc9424eeb821'
 };
+/*
+appid: 'wxb7289add5eeccd94',
+  secret: 'a9f49f6ead1f9a5468215aeecb8daf86'
+ */
+/*
+
+const grant_type = 'client_credential'
+    const appid = 'wxdf37904ad15f5f95'
+    const secret = 'a2818a5b02f7a7c93f95fc9424eeb821'
+
+    */
 
 /**
  * Module dependencies.
